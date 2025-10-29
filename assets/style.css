@@ -24,7 +24,7 @@ body{
         gap: 3rem;
 }
 
-.cartao:hover .cartao__conteudo {
+.cartao.active .cartao__conteudo {
     transform: rotateY(180deg);
 }
 .cartao__conteudo__pergunta,
@@ -33,14 +33,18 @@ body{
      position: absolute;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
+    background-color: rdba(0, 244, 191, 0.2);
+    border: 4px solid var(--card-back-color);
 }
 .cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
     margin-top: 4rem;
+    font-size: 1.4vw;
 }
 footer {
     background-color: black;
@@ -98,4 +102,11 @@ margin-top:0,5rem;
 .cartao__conteudo__resposta p{
     color: var(--card-back-color);
     font-weight: 700;
+}
+@media (max-width: 560 px) {
+
+    body {
+        background: url('img/bd-mobile.webp');
+    }
+
 }
